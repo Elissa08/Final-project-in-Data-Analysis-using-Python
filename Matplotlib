@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Load data from Excel
+data = pd.read_excel(r'C:\Users\Elissa Mae C. Cruz\Downloads\FILIPINO-MOVIES..................xlsx')
+
+# Select rows 0 to 40
+selected_data = data.iloc[0:41]
+
+# Plot using Matplotlib
+plt.bar(selected_data.index, selected_data['Ratings'])
+plt.xlabel('Row Index')
+plt.ylabel('Ratings')
+plt.title('Bar Graph using Matplotlib for Rows 0-40')
+plt.show()
